@@ -10,11 +10,12 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // collect value of input field
-  $name = htmlspecialchars($_REQUEST['name']); 
+  $name = $_REQUEST['name']; 
   if (empty($name)) {
     echo "Name is empty";
   } else {
-    echo "Hello, $name!";
+    echo "Hey there";
+    echo $_REQUEST['name'];
   }
 }
 ?>
